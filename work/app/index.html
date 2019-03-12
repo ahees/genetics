@@ -30,18 +30,66 @@
 
 <body>
 
-	<div class="container">
+	<div class="container" id="quest">
 
-		<div id="app">
-		  {{ message }}
-			<button v-on:click="say('hi')">Скажи hi</button>
+		<div class="block block-a">
+			<h4>БЛОК А</h4>
+			<div>
+					<div class="question">
+							1.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы у родственников первой степени родства  (мать, сестра, дочь) в возрасте до 50 лет?
+					</div>
+					<div class="answer">
+						<div class="a" data-name="true">Да</div>
+						<div class="a">Нет</div>
+						<div class="a">Не знаю</div>
+					</div>
+			</div>
+			<div>
+					<div class="question">
+							2.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы в нескольких поколениях по одной линии (материнской или отцовской) или у родственников, состоящих между собой в родстве первой степени?
+					</div>
+					<div class="answer">
+						<div class="a" data-name="true">Да</div>
+						<div class="a">Нет</div>
+						<div class="a">Не знаю</div>
+					</div>
+			</div>
 		</div>
+
+		<div class="block block-b">
+				<h4>БЛОК B</h4>
+				<div>
+						<div class="question">
+								1.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы у родственников второй степени родства  (бабушка, тетя)?
+						</div>
+						<div class="answer">
+							<div class="a" data-name="true">Да</div>
+							<div class="a">Нет</div>
+							<div class="a">Не знаю</div>
+						</div>
+				</div>
+				<div>
+						<div class="question">
+								2.	Были ли в Вашей семье зарегистрированы случаи рака маточной (фаллопиевой) трубы?
+						</div>
+						<div class="answer">
+							<div class="a" data-name="true">Да</div>
+							<div class="a">Нет</div>
+							<div class="a">Не знаю</div>
+						</div>
+				</div>
+		</div>
+
+		<!-- <div id="app">
+		  {{ message }}
+			<button v-on:click="say('hi')">hi</button>
+		</div> -->
 
 	</div>
 
 	<link rel="stylesheet" href="css/main.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 	<script src="js/scripts.min.js"></script>
 
 </body>
