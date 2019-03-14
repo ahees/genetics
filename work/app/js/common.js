@@ -16,19 +16,11 @@ $(function() {
 	// Custom JS
 	// $('.block .answer .a').on('click', function(){
 		
-<<<<<<< HEAD
-	// 	// $('.block .answer .a').removeClass('active');
-	// 	// $(this).parent().find('.a').removeClass('active');
-	// 	// $(this).toggleClass('active');
-	// 	$(this).css('background-color', 'tomato');
-	// });
-=======
 		// $('.block .answer .a').removeClass('active');
 		// $(this).parent().find('.a').removeClass('active');
 		// $(this).toggleClass('active');
 		
 	});
->>>>>>> 01c251356db4c418d6726362c89fb1424f4822a3
 
 
 	// $('body').on('change', '.block .answer .a', function() { 
