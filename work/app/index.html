@@ -30,66 +30,73 @@
 
 <body>
 
-	<div class="container" id="quest">
+	<header class="header"></header>
 
-		<div class="block block-a">
-			<h4>БЛОК А</h4>
-			<div>
-					<div class="question">
-							1.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы у родственников первой степени родства  (мать, сестра, дочь) в возрасте до 50 лет?
-					</div>
-					<div class="answer">
-						<div class="a" data-name="true">Да</div>
-						<div class="a">Нет</div>
-						<div class="a">Не знаю</div>
-					</div>
-			</div>
-			<div>
-					<div class="question">
-							2.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы в нескольких поколениях по одной линии (материнской или отцовской) или у родственников, состоящих между собой в родстве первой степени?
-					</div>
-					<div class="answer">
-						<div class="a" data-name="true">Да</div>
-						<div class="a">Нет</div>
-						<div class="a">Не знаю</div>
-					</div>
-			</div>
+	<section class="section section-anketa">
+		<div class="uk-container">
+
+
+			<form class="uk-form-stacked" id="fanketa">
+				
+					<fieldset class="uk-fieldset">
+
+							<div class="uk-margin">
+								<div class="uk-form-label">1.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы у родственников первой степени родства  (мать, сестра, дочь) в возрасте до 50 лет?</div>
+								<div class="uk-form-controls">
+									<label><input class="uk-radio" type="radio" name="aq1" value="yes"> Да</label>
+									<label><input class="uk-radio" type="radio" name="aq1" value="no"> Нет</label>
+									<label><input class="uk-radio" type="radio" name="aq1" value="ysn"> Незнаю</label>
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-form-label">2.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы в нескольких поколениях по одной линии (материнской или отцовской) или у родственников, состоящих между собой в родстве первой степени?</div>
+								<div class="uk-form-controls">
+									<label><input class="uk-radio" type="radio" name="aq2" value="yes"> Да</label>
+									<label><input class="uk-radio" type="radio" name="aq2" value="no"> Нет</label>
+									<label><input class="uk-radio" type="radio" name="aq2" value="ysn"> Незнаю</label>
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-form-label">3.	Были ли в Вашей семье зарегистрированы случаи рака яичников у родственников первой степени родства  (мать, сестра, дочь)? 
+
+								</div>
+								<div class="uk-form-controls">
+									<label><input class="uk-radio" type="radio" name="aq3" value="yes"> Да</label>
+									<label><input class="uk-radio" type="radio" name="aq3" value="no"> Нет</label>
+									<label><input class="uk-radio" type="radio" name="aq3" value="ysn"> Незнаю</label>
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-form-label">4.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы у мужчин?</div>
+								<div class="uk-form-controls">
+									<label><input class="uk-radio" type="radio" name="aq4" value="yes"> Да</label>
+									<label><input class="uk-radio" type="radio" name="aq4" value="no"> Нет</label>
+									<label><input class="uk-radio" type="radio" name="aq4" value="ysn"> Незнаю</label>
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-form-label">5.	Были ли у кого-либо из Ваших родственников  выявлены мутации гена BRCA1/ BRCA2?</div>
+								<div class="uk-form-controls">
+									<label><input class="uk-radio" type="radio" name="aq5" value="yes"> Да</label>
+									<label><input class="uk-radio" type="radio" name="aq5" value="no"> Нет</label>
+									<label><input class="uk-radio" type="radio" name="aq5" value="ysn"> Незнаю</label>
+								</div>
+							</div>
+
+					</fieldset>
+
+			</form>
+
+
 		</div>
+	</section>
 
-		<div class="block block-b">
-				<h4>БЛОК B</h4>
-				<div>
-						<div class="question">
-								1.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы у родственников второй степени родства  (бабушка, тетя)?
-						</div>
-						<div class="answer">
-							<div class="a" data-name="true">Да</div>
-							<div class="a">Нет</div>
-							<div class="a">Не знаю</div>
-						</div>
-				</div>
-				<div>
-						<div class="question">
-								2.	Были ли в Вашей семье зарегистрированы случаи рака маточной (фаллопиевой) трубы?
-						</div>
-						<div class="answer">
-							<div class="a" data-name="true">Да</div>
-							<div class="a">Нет</div>
-							<div class="a">Не знаю</div>
-						</div>
-				</div>
-		</div>
 
-		<!-- <div id="app">
-		  {{ message }}
-			<button v-on:click="say('hi')">hi</button>
-		</div> -->
 
-	</div>
+
+	
 
 	<link rel="stylesheet" href="css/main.min.css">
-	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 	<script src="js/scripts.min.js"></script>
 
 </body>
