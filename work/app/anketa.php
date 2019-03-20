@@ -42,6 +42,8 @@ $cq1 = $_POST['cq1'];
 $cq2 = $_POST['cq2']; 
 $cq3 = $_POST['cq3']; 
 
+
+
 // $to  = "fdsparta@gmail.com" ; 
 $to  = "ahees@ex.ua" ; 
 
@@ -96,14 +98,23 @@ $header .= "Cc:fdsparta@gmail.com \r\n";
 $header .= "MIME-Version: 1.0\r\n";
 $header .= "Content-type: text/html\r\n";
 
-$retval = mail ($to,$subject,$message,$header);
+//$retval = mail ($to,$subject,$message,$header);
 
-if( $retval == true ) {
-    echo "Анкета отправлена";
-}else {
-    echo "Message could not be sent...";
+//if( $retval == true ) {
+//    echo "Анкета отправлена";
+//}else {
+  //  echo "Message could not be sent...";
+//}
+
+//var_dump($_POST);
+
+if (!empty($_POST['name'])) {
+    // echo 'da';
+    var_dump($_POST);
+} else {
+    var_dump($_POST);
+    //echo 'net';
 }
-
 
 //header('Access-Control-Allow-Origin: *');
 //var_dump($_POST);
