@@ -75,7 +75,8 @@ $(function() {
 		var dddd = $('#ggg').val();
 		console.log(ddd);
 		$.ajax({
-			url: 'http://gen.test/anketa.php',
+			//url: 'http://gen.test/anketa.php',
+			url: 'http://jobmax.server/anketa.php',
 			type: 'post',
 			data: ddd,
 			success: function (result) {
@@ -90,7 +91,8 @@ $(function() {
 		var ddd = $('#fanketa').serializeArray();
 
 		$.ajax({
-			url: 'http://gen.test/anketa.php',
+			//url: 'http://gen.test/anketa.php',
+			url: 'http://jobmax.server/anketa.php',
 			type: 'post',
 			data: ddd,
 			success: function (result) {
