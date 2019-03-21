@@ -3,117 +3,139 @@ $(function() {
 
 	$("#phone").inputmask("+38(999)999-99-99");
 
-	$("#fanketa").on('change', '.block-a.novalid', function () {
+	$("#fanketa").on('change', '.block-a', function () {
 		var block_a = $(".block-a").serializeArray();
 
 		if (block_a.length >= 5) {
-			$(".next-block").addClass("active").addClass("active-a");
+			$(".block-a .next-block").addClass("active");
 			console.log('блок а валидный');
 		} else {
-			$(".next-block").removeClass("active");
+			$(".block-a .next-block").removeClass("active");
 		}
 
-		$(".next-block.active").on('click', function () {
+		$(".block-a .next-block").on('click', function () {
 			$(".block-a").fadeOut('slow', function () {
 				console.log('скрываем блок А');
 				$(".block-b").fadeIn('slow');
-				$(".next-block").removeClass("active");
-				$(".block-a").removeClass("novalid");
+				$(".block-a .next-block").removeClass("active");
 				console.log('открываем блок Б');
 			});
 		});
 		return true;
 		//console.log(block_a.length);
 	});	
-	$("#fanketa").on('change', '.block-b.novalid', function () {
+	$("#fanketa").on('change', '.block-b', function () {
 		var block_b = $(".block-b").serializeArray();
 
 		if (block_b.length >= 6) {
-			$(".next-block").addClass("active");
+			$(".block-b .next-block").addClass("active");
 			console.log('блок Б валидный');
 		} else {
-			$(".next-block").removeClass("active");
+			$(".block-b .next-block").removeClass("active");
 		}
 
-		$(".next-block.active.active-a").on('click', function () {
+		$(".block-b .next-block").on('click', function () {
 			$(".block-b").fadeOut('slow', function () {
 				console.log('скрываем блок Б');
 				$(".block-c").fadeIn('slow');			
-				$(".next-block").removeClass("active");
-				$(".block-b").removeClass("novalid");
+				$(".block-b .next-block").removeClass("active");
 				console.log('открываем блок С');
 			});
 		});
 		//console.log(block_a.length);
 	});	
 
-	$("#fanketa").on('change', '.block-c.novalid', function () {
+	$("#fanketa").on('change', '.block-c', function () {
 		var block_c = $(".block-c").serializeArray();
 
 		if (block_c.length >= 3) {
-			$(".next-block").addClass("active");
+			$(".block-c .next-block").addClass("active");
 			console.log('блок С валидный');
 		} else {
-			$(".next-block").removeClass("active");
+			$(".block-c .next-block").removeClass("active");
 		}
 
-		$(".next-block.active").on('click', function () {
+		$(".block-c .next-block").on('click', function () {
 			$(".block-c").fadeOut('slow', function () {
 				console.log('Скрываем блок С');
 				$(".block-d").fadeIn('slow');
-				$(".next-block").removeClass("active").css("display", "none");
-				$(".block-c").removeClass("novalid");
+				$(".block-c .next-block").removeClass("active");
+				
 				console.log('показываем блок Д');
 			});
 		});
 		//console.log(block_a.length);
 	});	
 
-	$("#ggg").on("click", function(e){
+	$("#fanketa").on('change', '.block-d', function () {
+
+		var bname       = $("#name").val().length,
+			bname_error = $("#name-error").html().length,
+			bphone      = $("#phone").val().length,
+			bphone_error= $("#phone-error").html().length, 
+			bemail		= $("#email").val().length,
+			bemail_error= $("#email-error").html().length;
+
+		if ((bname > 5) & (bname_error == 0)) {
+			alert('da');
+		}
+
+		var block_c = $(".block-c").serializeArray();
+
+		if (block_c.length >= 3) {
+			$(".block-c .next-block").addClass("active");
+			console.log('блок С валидный');
+		} else {
+			$(".block-c .next-block").removeClass("active");
+		}
+
+		$(".block-c .next-block").on('click', function () {
+			$(".block-c").fadeOut('slow', function () {
+				console.log('Скрываем блок С');
+				$(".block-d").fadeIn('slow');
+				$(".block-c .next-block").removeClass("active");
+				
+				console.log('показываем блок Д');
+			});
+		});
+		//console.log(block_a.length);
+	});	
+
+	$("#sub").on("click", function(e){
 		e.preventDefault();
 		var ddd = $('#fanketa').serializeArray();
-		var dddd = $('#ggg').val();
-		console.log(ddd);
+	
 		$.ajax({
+			url: 'https://acity.one/anketa.php',
 			//url: 'http://gen.test/anketa.php',
-			url: 'http://jobmax.server/anketa.php',
+			//url: 'http://jobmax.server/anketa.php',
 			type: 'post',
 			data: ddd,
 			success: function (result) {
-				$('#result').html(result);
+				if (result == "da") {
+					//$('#result').html(result);
+					$("#fanketa").fadeOut('slow', function () {
+			
+						$(".result-anketa").fadeIn('slow');
+						
+					});
+				} else {
+					console.log('net');
+				}
 			}
 		});
-		// console.log(data)
+
 	});
 
-	$("#fanketa").on("submit", function(e){
+	$(".sub-button1").on("click", function(e){
 		e.preventDefault();
-		var ddd = $('#fanketa').serializeArray();
-
-		$.ajax({
-			//url: 'http://gen.test/anketa.php',
-			url: 'http://jobmax.server/anketa.php',
-			type: 'post',
-			data: ddd,
-			success: function (result) {
-				$('#result').html(result);
-			}
+		$("#fanketa").fadeOut('slow', function () {
+			
+			$(".result-anketa").fadeIn('slow');
+			
 		});
-		// console.log(data)
 	});
-	// var block_bb = $("#fanketa").serializeArray();
-	// console.log(block_bb)
 
-	
-	
-
-	// Custom JS
-	// $('.block .answer .a').on('click', function(){
-		
-		// $('.block .answer .a').removeClass('active');
-		// $(this).parent().find('.a').removeClass('active');
-		// $(this).toggleClass('active');
-		
 	
 
 
@@ -129,17 +151,24 @@ $(function() {
 				}
 			},
 			rules: {
-				email: {
-				required: true,
-				email: true
-				},
 				name: {
-				required: true,
-				minlength: 5
+					required: true,
+					minlength: 5
+				},
+				email: {
+					required: true,
+					email: true
 				}
-			}
-			}
-		);
+				
+			},
+			
+			//success: function() { alert("Submitted!") }
+			//submitHandler: function() { alert("Submitted!") }
+
+
+  
+			
+		});
 
 
 

@@ -42,8 +42,8 @@
 					</div>
 					<div class="uk-navbar-right">
 						<ul class="uk-navbar-nav">
-							<li><a href="#">Ссылка</a></li>
-							<li><a href="#">Ссылка</a></li>
+							<li><a href="#">UA</a></li>
+							<!-- <li><a href="#">Ссылка</a></li> -->
 						</ul>
 					</div>
 				</nav>
@@ -108,12 +108,12 @@
 			<div class="anketa-box">
 
 					<h2 class="h anketa-title">
-						Анкета оцінки ризику онкопатології
+						Анкета оценки риска онкопатологии
 					</h2>
 
-					<form class="uk-form-stacked uk-switcher" id="fanketa" uk-switcher>
+					<form class="uk-form-stacked" id="fanketa">
 				
-						<fieldset class="uk-fieldset block-a novalid block-acti1ve">
+						<fieldset class="uk-fieldset block-a block-active">
 							<legend>Блок А</legend>
 							<div class="uk-margin">
 								<div class="uk-form-label">1.	Были ли в Вашей семье зарегистрированы случаи рака молочной железы у родственников первой степени родства  (мать, сестра, дочь) в возрасте до 50 лет?</div>
@@ -158,11 +158,11 @@
 								</div>
 							</div>
 		
-							<!-- <div class="next-block">Следующий</div> -->
+							<div class="next-block">Следующий</div>
 		
 						</fieldset>
 		
-						<fieldset class="uk-fieldset block-b novalid block-activ1e">
+						<fieldset class="uk-fieldset block-b">
 							<legend>Блок Б</legend>
 							<div class="uk-margin">
 								<div class="uk-form-label">1. Были ли в Вашей семье зарегистрированы случаи рака молочной железы у
@@ -223,11 +223,11 @@
 								</div>
 							</div>
 						
-							<!-- <div class="next-block">Следующий</div> -->
+							<div class="next-block">Следующий</div>
 						
 						</fieldset>
 		
-						<fieldset class="uk-fieldset block-c novalid block-activ1e">
+						<fieldset class="uk-fieldset block-c">
 							<legend>Блок C</legend>
 							<div class="uk-margin">
 								<div class="uk-form-label">
@@ -263,11 +263,11 @@
 							</div>	
 						
 							
-							<!-- <div class="next-block">Следующий</div> -->
+							<div class="next-block">Следующий</div>
 						
 						</fieldset>
 
-						<fieldset class="uk-fieldset block-d novalid block-activ1e">
+						<fieldset class="uk-fieldset block-d">
 							<legend>Контактные данные</legend>
 							<div class="uk-margin">
 								<label class="uk-form-label" for="name">Имя</label>
@@ -288,18 +288,23 @@
 								</div>
 							</div>
 							<div class="uk-margin">
-								<button type="submit" id="sub">go</button>
+								<button type="submit" class="uk-button sub-button" id="sub" >Отправить</button>
 							</div>
 						</fieldset>
 
 
-						<div class="next-block">Следующий</div>
+						<!-- <div class="next-block">Следующий</div> -->
 
 					</form>
 					<!-- <div class="sub">sub</div> -->
 					<div id="result">
-						Ваша анкета отправлена. Спасибо за доверие, которое Вы оказываете нашим специалистам. В
+						<div class="result-anketa">
+							<h2 class="h">
+									Ваша анкета отправлена
+							</h2>
+							 Спасибо за доверие, которое Вы оказываете нашим специалистам. В
 ближайшее время с Вами свяжутся по указанным контактам в анкете.
+						</div>
 					</div>
 				
 			</div>
@@ -311,15 +316,15 @@
 	<section class="section section-paket">
 		<div class="uk-container">
 			<h2 class="h h-title">Генетический анализ</h2>
-			<p class="1">
+			<p class="">
 				Для определения мутаций BRCA1 и BRCA2 существует несколько тестов. Некоторые тесты ищут
-специфическую вредоносную мутацию гена BRCA1 или BRCA2, которая уже была обнаружена в
-другого члена семьи. Другие тесты проверяют все известные мутации в обоих генах.
+				специфическую вредоносную мутацию гена BRCA1 или BRCA2, которая уже была обнаружена в
+				другого члена семьи. Другие тесты проверяют все известные мутации в обоих генах.
 			</p>
 			<p>
 				Мультигенное тестирование использует секвенирование нового поколения для поиска мутаций во
-многих генах, которые связаны с повышенным риском развития рака молочной железы и
-яичников, в том числе BRCA1 и BRCA2.
+				многих генах, которые связаны с повышенным риском развития рака молочной железы и
+				яичников, в том числе BRCA1 и BRCA2.
 			</p>
 			<p>
 				Для проведения анализа в лаборатории необходим образец ДНК (из крови или слюны).
@@ -327,9 +332,9 @@
 			<div class="paket-box">
 				<div class="paket-item">
 					<div class="paket-item-img"></div>
-					<div>
+					<div class="paket-title">
 						Секвенирование генов BRCA1,2
-(включая консультацию генетика)
+						(включая консультацию генетика)
 					</div>		
 					<div class="paket-price">
 						10 290 грн
@@ -337,10 +342,10 @@
 				</div>
 				<div class="paket-item">
 					<div class="paket-item-img"></div>
-					<div>
+					<div class="paket-title">
 						Определение мутаций генов
-BRCA1 и BRCA2 (риск развития
-рака молочной железы)
+						BRCA1 и BRCA2 (риск развития
+						рака молочной железы)
 					</div>
 					<div class="paket-price">
 						2 428 грн
@@ -350,8 +355,8 @@ BRCA1 и BRCA2 (риск развития
 
 			<p>
 				Использование такого нового инструмента в борьбе с раком, как секвенирование генов BRCA1,2
-дает больше возможностей для выбора средств по сохранению здоровья. Берегите себя и своих
-близких - позаботьтесь о своем здоровье и долголетии уже сейчас.
+				дает больше возможностей для выбора средств по сохранению здоровья. Берегите себя и своих
+				близких - позаботьтесь о своем здоровье и долголетии уже сейчас.
 			</p>
 
 		</div>

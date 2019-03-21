@@ -140,11 +140,24 @@ body
 	label.error
 		font-size: 14px
 		color: #e74c3c
+	.block-a,
 	.block-b,
 	.block-c,
 	.block-d
 		display: none
-
+	.block-active
+		display: block
+.sub-button
+	padding: 10px 25px
+	font-size: 18px
+	text-transform: none
+	// background-color: #f3f3f3
+	background-color: $accent
+	color: #ffffff
+	transition: color .25s ease-in-out, background-color .3s ease-in-out
+	&:disabled
+		background-color: #f3f3f3
+		color: #333333
 .section-anketa
 	position: relative
 	background-color: #f8f8f8
@@ -170,7 +183,12 @@ body
 .anketa-title
 	font-size: 2.5em
 	text-align: center
-
+.result-anketa
+	display: none
+	font-size: 20px
+	text-align: center
+	.h
+		color: $accent
 
 .section-contacts
 	background-color: $accent
@@ -226,24 +244,39 @@ body
 	justify-content: center
 	margin: 75px 0
 	// flex-direction: row
-	.paket-item		
-		background-color: #fff
-		width: 320px
-		width: 45%
-		height: 400px
-		margin: 0 10px
-		border-radius: 5px
-		overflow: hidden
-		box-shadow: 0 0px 15px 5px rgba(0,0,0, .075)
-		transition: background-color .3s ease-in-out, color .25s ease-in-out
-		&-img
-			height: 200px
-			background-image: url('../img/banner_thumb_87.jpg')
-			background-repeat: no-repeat
-			background-size: cover
-			background-position: center
-		&:hover
-			background-color: $accent
+.paket-item		
+	background-color: #fff
+	width: 320px
+	width: 45%
+	// height: 400px
+	margin: 0 10px
+	border-radius: 5px
+	overflow: hidden
+	box-shadow: 0 0px 15px 5px rgba(0,0,0, .075)
+	transition: background-color .5s ease-in-out, color .55s ease-in-out
+	&-img
+		height: 200px
+		background-image: url('../img/banner_thumb_87.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+	&:hover
+		background-color: $accent
+		color: #ffffff
+		.paket-price
+			color: #ffffff
+	.paket-price
+		padding: 25px
+		text-align: center
+		font-size: 26px
+		font-weight: 500
+		color: $accent
+		transition: color .55s ease-in-out
+	.paket-title
+		text-align: center
+		padding: 20px 25px 0 25px
+		font-weight: 500
+		font-size: 20px
 
 
 
