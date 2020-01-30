@@ -17,7 +17,10 @@
 		display: flex
 		flex-direction: row
 		flex-wrap: wrap
+		justify-content: center
+		padding: 0
 		padding-bottom: 50px
+		// padding: 0
 		div
 			width: 50%
 			text-align: center
@@ -28,6 +31,8 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+	.h-title
+		font-size: 2.5em
 	.anketa-box
 		padding: 25px
 @media only screen and (max-width : 640px)
@@ -43,12 +48,59 @@
 		width: 100%
 		max-width: 320px
 		margin-bottom: 20px
+	.list-maps
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		padding: 0
+		padding-bottom: 50px
+		// padding: 0
+		div
+			width: 100%
+			text-align: center
+			&:before
+				left: 50%
+				transform: translateX(-50%)
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.list-maps
+		// padding: 100px 50px 100px 25px
+		a
+			// position: relative
+			font-size: 18px
+			// color: #ffffff
+			// color: #333333
+			// text-decoration: none
+			span
+				// color: rgba(255,255,255, .4)
+				// color: rgba($accent, .85)
+				// display: block
+				// font-size: 18px
+	.anketa-title
+		font-size: 2em
+	#fanketa
+		.uk-form-label
+			font-size: 16px
+		.uk-form-controls
+			padding-left: 0
+			label
+				font-size: 12px
+	.header
+		.header-block
+			width: 100%
+			// text-align: center
+			// padding: 20px
+			left: 0			
+			right: 0
+			padding: 20px 0
+			.header-title
+				font-size: 2em
+			span
+				font-size: 18px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
